@@ -1,17 +1,23 @@
 import React from 'react'
+import styled from 'styled-components'
+
 import Job from './Job'
 
-
+const Wrapper = styled.div`
+    margin: 0 auto;
+    border-style: solid;
+    position: relative;
+    z-index: 2;
+    width: 75%;
+    top: 100px;
+`
 class JobList extends React.Component {
     render() {
-        console.log(this.props.data)
+        // console.log(this.props.data)
         return(
-            <div>
-                {/* <h1>{this.props.company}</h1> */}
+            <Wrapper>
                 {this.props.data.map((job) => <Job job={job}/>)}
-                {/* <Job job={this.props}/> */}
-        
-            </div>
+            </Wrapper>
         )
     }
 }
