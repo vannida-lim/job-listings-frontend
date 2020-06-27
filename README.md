@@ -27,6 +27,7 @@ This web app makes use of the following:
 -   HTML5 
 -   CSS3
 -   React
+-   styled-components
 
 **Installing**
 --------------
@@ -34,4 +35,4 @@ This web app makes use of the following:
 
 -   `cd`  to `job-listings-frontend`
 
--   run  `npm start` to start server locally
+-   run  `npm i && npm start` to run dependencies and start server locally

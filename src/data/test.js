@@ -1,1 +1,0 @@
-import image from '../images/account.svg'
