@@ -8,6 +8,12 @@ const Wrapper = styled.div`
     position: relative;
     width: 75%;
     top: 100px;
+    background: #fff;
+    box-shadow: 0px 0px 20px hsla(179, 29%, 51%, 0.5), 0px 7px 20px hsla(179, 29%, 51%, 0.19);
+    @media (max-width: 375px) {
+       width: 90%;
+       z-index: 2;
+    }
     
 
 `

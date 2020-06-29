@@ -18,6 +18,10 @@ const Header = styled.img`
   background: #5ea4a4;
   position: absolute;
   z-index: 1;
+  @media (max-width: 375px) {
+    transform: scale(1.1);
+    display: inline-block;
+  }
 `
 
 

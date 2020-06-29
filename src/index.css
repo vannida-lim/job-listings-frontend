@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan&display=swap');
 
-body {
-  margin: 0;
-  font-family: 'Spartan', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: 'grey';
+@media only screen and (max-width: 1440px) {
+  body {
+    margin: 0;
+    font-family: 'Spartan', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: hsl(180, 52%, 96%);
+  }
 }
