@@ -109,14 +109,15 @@ const RightSide = styled.div`
     }
 `
 
-const Details = styled.div`
+const Details = styled.button`
     border-radius: 5px;
-    background-color: hsla(180, 52%, 94%, 1);
+    border-style: none;
+    background: hsla(180, 52%, 94%, 1);
     color: #5EA4A4;
     font-weight: 700;
-    padding: 8px;
-    height: 9px;
-    font-size: 0.7em;
+    padding: 7px 14px;
+    margin: 0 5px; 
+    font-size: 12px;
     justify-self: end;
     &:hover {
         background-color: #5EA4A4;
@@ -124,7 +125,6 @@ const Details = styled.div`
     }
 `
 
-// style={{borderLeft: '6px solid hsl(179, 29%, 51%)'}}
 const Job = (props) => {
     return (
         <div>
@@ -147,7 +147,7 @@ const Job = (props) => {
 
                 <RightSide>
                     <Details>{props.job.role}</Details>
-                    <Details>{props.job.level}</Details>
+                    <Details onClick={props.handleClick}>{props.job.level}</Details>
                     {props.job.languages.map((lan) => <Details>{lan}</Details>)}
                     {props.job.tools.map((tool) => <Details>{tool}</Details>)}
                 </RightSide>

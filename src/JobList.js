@@ -14,10 +14,20 @@ const Wrapper = styled.div`
     }
 `
 class JobList extends React.Component {
+
+    displayJobs = () => {
+        return this.props.data.map((job) => <Job 
+            key={job.id} 
+            job={job}
+            />
+        )
+    }
+
     render() {
         return(
             <Wrapper>
-                {this.props.data.map((job) => <Job key={job.id} job={job}/>)}
+                {/* {this.props.data.map((job) => <Job key={job.id} job={job}/>)} */}
+                {this.displayJobs()}
             </Wrapper>
         )
     }

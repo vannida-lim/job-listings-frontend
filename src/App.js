@@ -24,21 +24,46 @@ const Header = styled.img`
   }
 `
 
-
 class App extends React.Component {
   state = {
-    data
+    data,
+    filtered: []
+  }
+
+  componentDidMount() {
+    fetch('./data/data.json')
+    .then(r => r.json())
+    .then((data) => {
+      this.setState({
+        data: data
+      })
+    })
+  }
+
+  handleFilter = (e) => {
+    if (e.target.innerHTML === 'All') {
+      this.setState({
+        filtered: data
+      })
+    }
+    let filteredJobs = this.state.data.filter(job => job.role === e.target.innerHTML || job.level === e.target.innerHTML)
+    if (e.target.innerHTML !== 'All') {
+      this.setState({
+        filtered: filteredJobs
+      })
+    }
   }
 
   render() {
-    // console.log(this.state)
+    console.log(this.state.data)
     return(
       <Wrapper>
         <Header src={BgHeaderDesktop}/>
-        <Filter/>
-        <JobList data={this.state.data}/>
+        <Filter onClick={this.handleFilter}/>
+        {/* <JobList data={this.state.data}/> */}
+        <JobList data={this.state.filtered.length === 0? this.state.data : this.state.filtered}/>
       </Wrapper>
     )
   }
 }
-export default App
+export default App;
