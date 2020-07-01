@@ -9,11 +9,11 @@ Lim</a>
 
 **See it Live** 
 ------------
-[Netlify]()
+[Netlify](https://job-listings-frontend.netlify.app/)
 
-**Features**
+**Demo**
 ------------
-
+![](demo.gif)
 
 
 **Tech Stack**
